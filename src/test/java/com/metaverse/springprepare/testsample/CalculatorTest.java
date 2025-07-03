@@ -8,20 +8,39 @@ class CalculatorTest {
     @Test
     @DisplayName("더하기 테스트")
     void test1(){
+
+        //given(주어진 값 선언)
         Calculator calculator = new Calculator();
-        Double result= calculator.operate(8, "+", 2);
+        int num1=8;
+        int num2=2;
+        String op="+";
+
+        //when(테스트에 사용될 값)
+        Double result= calculator.operate(num1, op, num2);
         System.out.println("result ="+result);
 
+        //then(결과)
         Assertions.assertEquals(10, result);
 
 
     }
+    @Test
+    @DisplayName("나누기 테스트")
     void test2(){
+
+        //given(주어진 값 선언)
         Calculator calculator = new Calculator();
-        Double result= calculator.operate( 8,  "/", 2);
+        int num1=8;
+        int num2=2;
+        String op="/";
+
+        //when(테스트에 사용될 값)
+        Double result= calculator.operate(num1, op, num2);
         System.out.println("result ="+result);
 
-        Assertions.assertEquals(5, result);
+        //then(결과)
+        Assertions.assertEquals(10, result);
 
-}
+
+    }
 }
